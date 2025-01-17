@@ -1,11 +1,14 @@
-import Hero from "./components/pages/page-components/hero-section";
-import Layout from "./layouts/layout";
+import Hero from "./pages/hero-page/hero-section";
+import RootLayout from "./layouts/root-layout";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <Layout>
-      <Hero />
-    </Layout>
+    <RootLayout>
+      <Routes>
+        <Route path="/" element={<Hero />} />
+      </Routes>
+    </RootLayout>
   );
 }
 
